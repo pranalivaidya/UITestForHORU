@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="7" time="27.922">
+    <testcase classname="How old are you home page" name="Home page title" time="4.841">
+        <system-out><![CDATA[Given user navigate to home page............................................passed
+Then I validate the page title..............................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="How old are you home page" name="Home page header text" time="3.697">
+        <system-out><![CDATA[Given user navigate to home page............................................passed
+Then I validate the header text.............................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="How old are you home page" name="Default fields - your name and your birthday" time="3.619">
+        <system-out><![CDATA[Given user navigate to home page............................................passed
+Then I verify yourName is by default empty..................................passed
+And your birthday field is by default empty.................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="How old are you home page" name="Invalid field - your name" time="4.029">
+        <system-out><![CDATA[Given user navigate to home page............................................passed
+When user keeps your name as blank "".......................................passed
+And user enters correct your birthday field as "07/08/1994".................passed
+And user clicks on submit button............................................passed
+Then user verify error "incorrect symbols" for name field...................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="How old are you home page" name="Birthday year is less than 1900" time="3.474">
+        <system-out><![CDATA[Given user navigate to home page............................................passed
+When user enters correct your name field as pranali.........................passed
+And user enters correct your birthday field as "15/04/19"...................passed
+And user clicks on submit button............................................passed
+Then user verify error "you are too old to use it" for birthday field.......passed
+]]></system-out>
+    </testcase>
+    <testcase classname="How old are you home page" name="Your birthday field is blank" time="3.724">
+        <system-out><![CDATA[Given user navigate to home page............................................passed
+Given user navigate to home page............................................passed
+When user enters correct your name field as pranali.........................passed
+And user enters correct your birthday field as ""...........................passed
+And user clicks on submit button............................................passed
+Then user verify error "wrong date" for birthday field......................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="How old are you home page" name="Find your ege" time="4.147">
+        <system-out><![CDATA[Given user navigate to home page............................................passed
+When user enters correct your name field as pranali.........................passed
+And user enters correct your birthday field as "15/04/1994".................passed
+And user clicks on submit button............................................passed
+Then user verify age is displayed as "15/04/1994"...........................passed
+And user verify hello text is displayed pranali.............................passed
+]]></system-out>
+    </testcase>
+</testsuite>
